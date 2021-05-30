@@ -1,6 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
 import { Platform, MenuController, Nav } from 'ionic-angular';
-import { CalculatorComponent } from '../../components/calculator/calculator';
 import { CalculatorPage} from "../calculator/calculator"
 
 @Component({
@@ -13,10 +12,7 @@ export class HelloIonicPage {
   constructor() {
 
     // public menu: MenuController;
-    this.pages = [
-      { title: 'Calculator', component: CalculatorPage },
 
-    ];
   }
   open(){
     // console.log("clicked")
@@ -24,10 +20,5 @@ export class HelloIonicPage {
    window.open('https://www.pacmanclicks.com','_blank') ;
 
   }
-  openCalculator(page) {
-    console.log("clicked")
-    this.nav.setRoot(page.component);
-    // navigate to the new page if it is not the current page
-    // this.nav.setRoot(page.component);
-  }
+
 }

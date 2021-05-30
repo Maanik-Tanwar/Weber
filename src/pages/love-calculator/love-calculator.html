@@ -1,0 +1,51 @@
+<!--
+  Generated template for the LoveCalculatorPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Love Calculator</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<br>
+<br>
+<br>
+<br>
+
+<div class=" custom-row">
+  <div class= "col-sm-5 custom-container jumbotron">
+       
+    <form #formdata = "ngForm" (ngSubmit)="onSubmit(formdata.value)">
+        <fieldset>
+
+          <legend>Love Calculator</legend>
+
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Enter first name" name="firstName" [(ngModel)]="firstName" required>
+          </div>
+
+          <div class="form-group">
+            <label for="secondName">Second Name</label>
+            <input type="text" class="form-control" id="secondName" placeholder="Enter second name" name="secondName" [(ngModel)]="secondName" required>
+          </div>
+           <!--- Buttons Block --->
+            <div class="form-group ">
+              <button ion-button type="submit" value="submit" class="btn btn-primary"   [disabled]="formdata.form.invalid">Submit</button>
+              <button ion-button class="btn btn-primary" (click) = "onRefresh(formdata)" >Refresh</button>
+            </div>
+        </fieldset>
+    </form>
+
+    <div class="result" [hidden]="hidden">
+    Score : {{result}} %
+    </div>
+
+  </div>
+</div>

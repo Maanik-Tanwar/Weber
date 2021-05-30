@@ -11,6 +11,7 @@ import { CalculatorPage } from '../pages/calculator/calculator'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { LoveCalculatorPage } from '../pages/love-calculator/love-calculator';
 
 
 @Component({
@@ -36,7 +37,8 @@ export class MyApp {
       { title: 'Main Page', component: HelloIonicPage },
       { title: 'Listings', component: ListPage },
       { title: 'About', component: AboutPage },
-      {title: 'Calculator', component: CalculatorPage}
+      {title: 'Calculator', component: CalculatorPage},
+      {title: 'Love Calculator', component: LoveCalculatorPage }
 
     ];
   }
