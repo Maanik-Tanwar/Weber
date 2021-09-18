@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms'
 import { ReactiveFormsModule } from '@angular/forms';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
@@ -15,6 +16,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AboutPage } from '../pages/about/about';
 import { CalculatorPage } from '../pages/calculator/calculator';
 import { LoveCalculatorPage } from '../pages/love-calculator/love-calculator';
+import { NewsPage } from '../pages/news/news';
 
 
 @NgModule({
@@ -25,14 +27,16 @@ import { LoveCalculatorPage } from '../pages/love-calculator/love-calculator';
     ListPage,
     AboutPage,
     CalculatorPage,
-    LoveCalculatorPage
+    LoveCalculatorPage,
+    NewsPage
     
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -42,7 +46,8 @@ import { LoveCalculatorPage } from '../pages/love-calculator/love-calculator';
     ListPage,
     AboutPage,
     CalculatorPage,
-    LoveCalculatorPage
+    LoveCalculatorPage,
+    NewsPage
   ],
   providers: [
     StatusBar,

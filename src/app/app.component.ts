@@ -12,7 +12,7 @@ import { CalculatorPage } from '../pages/calculator/calculator'
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoveCalculatorPage } from '../pages/love-calculator/love-calculator';
-
+import { NewsPage } from '../pages/news/news';
 
 @Component({
   templateUrl: 'app.html'
@@ -21,7 +21,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make HelloIonicPage the root (or first) page
-  rootPage = HelloIonicPage;
+  rootPage = NewsPage;
   pages: Array<{title: string, component: any}>;
 
   constructor(
@@ -38,7 +38,9 @@ export class MyApp {
       { title: 'Listings', component: ListPage },
       { title: 'About', component: AboutPage },
       {title: 'Calculator', component: CalculatorPage},
-      {title: 'Love Calculator', component: LoveCalculatorPage }
+      {title: 'Love Calculator', component: LoveCalculatorPage },
+      {title: 'News Reader', component: NewsPage }
+
 
     ];
   }

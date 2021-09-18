@@ -1,0 +1,50 @@
+<!--
+  Generated template for the NewsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>News
+
+</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<!-- <div class="container">
+
+    <select name="category" id="category" (change)="show($event)">
+      <option value="company" (click)="show()" >Company</option>
+      <option value="Politics" (click)="show()" >Politics</option>
+      <option value="Science" (click)="show()" >Science</option>
+      <option value="Markets" (click)="show()" >Markets</option>
+    </select>
+</div> -->
+
+<div class="container">
+  <!-- list of feed items -->
+  <div class="box is-hover" *ngFor="let item of company" >
+    <article class="media">
+      <a href={{item.link}} target="_blank">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              <strong>{{item.author}}</strong> <small> · {{item.pubDate | date:'dd-MM-yyyy'}}</small>
+              <br>
+              <strong>{{item.title}}</strong>
+              <br>
+              <br>
+            </p>
+          </div>
+        </div>
+      </a>
+    </article>
+  </div>
+  <!-- end / list of feed items -->
+</div>
+</ion-content>
