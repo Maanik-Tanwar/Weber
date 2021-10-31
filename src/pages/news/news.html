@@ -16,16 +16,18 @@
 </ion-header>
 
 <ion-content padding>
-<!-- <div class="container">
+<div class="dropdown ">
 
-    <select name="category" id="category" (change)="show($event)">
-      <option value="company" (click)="show()" >Company</option>
-      <option value="Politics" (click)="show()" >Politics</option>
-      <option value="Science" (click)="show()" >Science</option>
-      <option value="Markets" (click)="show()" >Markets</option>
+    <select name="category" id="category" #category (change)='getFeeds(category.value)'>
+      <option value="https://www.livemint.com/rss/companies"  >Company</option>
+      <option value="https://www.livemint.com/rss/politics" >Politics</option>
+      <option value="https://www.livemint.com/rss/science" >Science</option>
+      <option value="https://www.livemint.com/rss/markets" >Markets</option>
+      <option value="https://www.livemint.com/rss/sports" >Sports</option>
     </select>
-</div> -->
-
+</div>
+<br>
+<!-- <button (click)="show()">show</button> -->
 <div class="container">
   <!-- list of feed items -->
   <div class="box is-hover" *ngFor="let item of company" >
@@ -34,15 +36,17 @@
         <div class="media-content">
           <div class="content">
             <p>
-              <strong>{{item.author}}</strong> <small> · {{item.pubDate | date:'dd-MM-yyyy'}}</small>
+              <strong>{{item.author}}</strong> 
               <br>
               <strong>{{item.title}}</strong>
               <br>
               <br>
+              <small> · {{item.pubDate | date:'dd-MM-yyyy'}}</small>
             </p>
           </div>
         </div>
       </a>
+      <hr>
     </article>
   </div>
   <!-- end / list of feed items -->

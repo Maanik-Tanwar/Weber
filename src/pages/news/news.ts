@@ -20,22 +20,32 @@ import { HttpClient } from '@angular/common/http';
 export class NewsPage {
   films: Observable<any>;
   data:any
-  company:any;
+  company:any=[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams,  public httpClient: HttpClient ) {
- const RSS_URL="https://www.livemint.com/rss/companies"
- this.films=this.httpClient.get(' https://api.rss2json.com/v1/api.json?rss_url='+RSS_URL);
- this.films
- .subscribe(data => {
-   this.data=data;
-   this.show()
- })
+  
+  this.getFeeds("https://www.livemint.com/rss/companies");
  
   }
-  
+  getFeeds(url:any){
+    this.films=this.httpClient.get(' https://api.rss2json.com/v1/api.json?rss_url='+url);
+    this.films
+            .subscribe(data => {
+            this.data=data;
+            this.show()
+          })
+  }
   show(){
     // event: any
     this.company=this.data['items']
+    // var feed_list= this.company.length
+    // console.log("feed list",feed_list)
+    // console.log("total",this.data['items'].length)
+    // for(var i =feed_list;i<feed_list+4;i++){
+    //   if(feed_list<this.data['items'].length){
+    //     this.company.push(this.data['items'][i])
+    //   }
+    // }
 
   }
   ionViewDidLoad() {

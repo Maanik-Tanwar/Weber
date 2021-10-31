@@ -6,3 +6,16 @@
   .is-hover:hover {
     box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
   }
+
+.container{
+  padding-left: 1px;
+}
+.content{
+  color: black;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  padding-left: 85px;
+}

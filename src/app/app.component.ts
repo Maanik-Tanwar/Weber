@@ -38,7 +38,7 @@ export class MyApp {
       { title: 'Listings', component: ListPage },
       { title: 'About', component: AboutPage },
       {title: 'Calculator', component: CalculatorPage},
-      {title: 'Love Calculator', component: LoveCalculatorPage },
+      {title: 'Compatibility Calculator', component: LoveCalculatorPage },
       {title: 'News Reader', component: NewsPage }
 
 
